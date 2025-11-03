@@ -1,3 +1,8 @@
+console.log(`[BE] Checking Stripe Key...`);
+console.log(`[BE] Key type: ${typeof process.env.STRIPE_SECRET_KEY}`);
+console.log(`[BE] Key exists: ${!!process.env.STRIPE_SECRET_KEY}`);
+console.log(`[BE] Key starts with sk_: ${process.env.STRIPE_SECRET_KEY ? process.env.STRIPE_SECRET_KEY.startsWith('sk_') : 'N/A'}`);
+
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 module.exports = async (req, res) => {
