@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
   }
 
   // --- CORS Configuration ---
-  const allowedOrigins = ['https://angelsharegreetingcards.com', 'http://localhost:5173'];
+  const allowedOrigins = ['https://angelsharegreetingcards.com', 'http://localhost:5173', 'https://angelsharegreeting-cards.vercel.app'];
   const origin = req.headers.origin;
 
   if (allowedOrigins.includes(origin)) {
